@@ -1,0 +1,154 @@
+    /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #6e584f;
+  background-color: #f9f6f2;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;              /* altura fija del header */
+  padding: 0 20px 0 0;   /* padding solo a la derecha */
+  background: #463632;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 70px;    /* agranda un poco el logo */
+  width: auto;
+  object-fit: contain;
+  
+}
+
+/* Menu hamburguesa */
+.menu-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e6d5c3;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('fondo_hero.JPG') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .logo {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #fff;
+  background: rgba(62, 47, 47, 0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+/* SECCIÓN */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6e584f;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #6e584f;
+}
+
+footer {
+  background: #6e584f;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-buttons {
+  margin-bottom: 10px;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-buttons a img {
+  width: 30px; /* tamaño del icono */
+  height: 30px;
+}
+
+.social-buttons a:hover {
+  transform: scale(1.2); /* efecto al pasar el mouse */
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #6e584f;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}

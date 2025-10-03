@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viva Yoga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+        <img src="logo_vivayoga.png" alt="Viva Yoga" />
+    </div>
+
+    <nav>
+      <div class="menu-btn" id="menu-btn">
+        ☰
+      </div>
+      <ul id="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Clases</a></li>
+        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Referencias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">        
+    <img src="logo_vivayoga.png" alt="Viva Yoga" class="logo" />
+  </div>
+
+  <!-- SECCIÓN 1 -->
+  <section>
+    <h2>𝙑𝙞𝙣𝙮𝙖𝙨𝙖 𝙔𝙤𝙜𝙖 ♡</h2>
+    <p>Es una práctica dinámica donde la respiración marca el ritmo del movimiento. 
+        Cada postura se conecta con la siguiente, es un estilo creativo, adaptable a cada practicante y muy transformador.
+      <br>
+      <br>
+      ༄ La práctica de Vinyasa Yoga es ideal si buscás equilibrar la mente, fortalecer músculos, trabajar la flexibilidad y alcanzar un estado de fluidez cuerpo-mente.
+    </p>
+  </section>
+
+  <!-- SECCIÓN 2 -->
+  <section>
+    <h2>𝘾𝙡𝙖𝙨𝙚𝙨 𝙫𝙞𝙧𝙩𝙪𝙖𝙡𝙚𝙨 ∞</h2>
+    <p>Una propuesta para sostener la constancia en tu práctica personal.
+      Cada semana 2 prácticas nuevas.
+      Desde el lugar que quieras, en el horario que quieras. 
+      <br>
+      <br>
+
+    𝙇𝙖𝙨 𝙥𝙧𝙖́𝙘𝙩𝙞𝙘𝙖𝙨 𝙨𝙤𝙣 𝙖𝙥𝙩𝙖𝙨 𝙥𝙖𝙧𝙖 𝙩𝙤𝙙𝙤𝙨 𝙡𝙤𝙨 𝙣𝙞𝙫𝙚𝙡𝙚𝙨 𝙙𝙚 𝙚𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 ツ
+  </section>
+
+  <footer>
+    <div class="social-buttons">
+      <a href="https://www.instagram.com/_vivayoga" target="_blank" class="instagram">
+       <img src="instagram-icon.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/aixahasselstrom" target="_blank" class="facebook">
+        <img src="facebook-icon.png" alt="Facebook">
+      </a>
+    </div>
+  <p>&copy; 2025 Viva Yoga</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
