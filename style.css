@@ -98,9 +98,17 @@ section h2 {
 }
 
 section p {
+  font-family: 'Cardo', serif;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #6e584f;
+}
+
+.divider {
+  text-align: center;
+  font-size: 20px;
+  color: #a67b5b;
+  margin: 0 0;
 }
 
 footer {
