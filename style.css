@@ -83,6 +83,30 @@ nav a:hover {
   border-radius: 10px;
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px; /* más grande */
+  height: 70px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 125%;
+  height: 125%;
+  padding: 14px; /* espacio interior */
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+
+
 /* SECCIÓN */
 section {
   padding: 80px 20px;
