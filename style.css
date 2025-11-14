@@ -134,6 +134,28 @@ section p {
   margin: 0 0;
 }
 
+/* BOTÓN quiero sumarme a las clases*/
+.btn-sumarme {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #8c6f50; /* tono tierra cálido */
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  font-family: "Cormorant Garamond", serif; /* combina con tu estilo */
+  margin-top: 30px;
+}
+
+.btn-sumarme:hover {
+  background-color: #6e573f; /* más oscuro para el hover */
+  transform: scale(1.05);
+}
+
+
+/* FOOTER */
 footer {
   background: #6e584f;
   color: white;
