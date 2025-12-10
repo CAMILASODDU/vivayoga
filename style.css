@@ -1,4 +1,4 @@
-    /* RESET */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +16,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;              /* altura fija del header */
-  padding: 0 20px 0 0;   /* padding solo a la derecha */
+  height: 70px;
+  padding: 0 20px 0 0;
   background: #463632;
   display: flex;
   justify-content: space-between;
@@ -26,13 +26,11 @@ header {
 }
 
 header .logo img {
-  height: 70px;    /* agranda un poco el logo */
+  height: 70px;
   width: auto;
   object-fit: contain;
-  
 }
 
-/* Menu hamburguesa */
 .menu-btn {
   font-size: 1.8rem;
   color: #fff;
@@ -60,53 +58,22 @@ nav a:hover {
 /* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-              url('fondo_hero.JPG') no-repeat center center/cover;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/fondo_hero_opcion2.jpeg') no-repeat center center/cover;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
+  padding: 0 40px;
 }
 
-.hero .logo {
-  position: absolute;
-  top: 100px;
-  right: 30px;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  color: #fff;
-  background: rgba(62, 47, 47, 0.5);
-  padding: 20px 40px;
-  border-radius: 10px;
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 70px; /* más grande */
-  height: 70px;
-  z-index: 1000;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.whatsapp-float img {
-  width: 125%;
-  height: 125%;
-  padding: 14px; /* espacio interior */
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
+.hero img {
+  margin-top: -170px;   /* Ajustá este valor a tu gusto */
+  max-width: 80%;
+  height: auto;
 }
 
 /* SECCIÓN */
-section {
+section:not(.hero) {
   padding: 80px 20px;
   max-width: 1000px;
   margin: auto;
@@ -117,7 +84,7 @@ section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #6e584f;
-  font-family: 'crimson text', serif;
+  font-family: 'Crimson Text', serif;
 }
 
 section p {
@@ -125,35 +92,261 @@ section p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #6e584f;
+  text-align: justify;
 }
 
-.divider {
+/* MÁS MARGEN LATERAL EN MÓVILES */
+@media (max-width: 768px) {
+  section:not(.hero) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .dos-columnas {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+/* SECCIÓN DOS COLUMNAS */
+.dos-columnas {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.dos-columnas .columna {
+  flex: 1;
+}
+
+.dos-columnas .imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.dos-columnas .texto {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .dos-columnas {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .dos-columnas .texto {
+    text-align: justify;
+  }
+}
+
+/* CARRUSEL */
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 3 / 4;   /* ⬅ ESTO DA ALTURA AUTOMÁTICA */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  border-radius: 10px;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+/* Botones */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+.carousel button:hover {
+  background: rgba(0,0,0,0.65);
+}
+
+/* Contador */
+.carousel-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  z-index: 10;
+  font-family: 'Cardo', serif;
+}
+
+
+/* Móvil: botones más chicos */
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 90%;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+
+
+
+
+/* SECCIÓN CONTACTO */
+.contacto {
+  padding: 80px 20px;
   text-align: center;
-  font-size: 20px;
-  color: #a67b5b;
-  margin: 0 0;
+  color: #6e584f;
+  font-family: 'Cardo', serif;
 }
 
-/* BOTÓN quiero sumarme a las clases*/
+.contacto h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.contacto-items {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap; /* responsive */
+  max-width: 900px;
+  margin: auto;
+}
+
+.contacto .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+  text-decoration: none;
+  color: inherit;               /* mantiene color marrón */
+  transition: transform 0.2s;
+}
+
+.contacto .item:hover {
+  transform: scale(1.07);
+}
+
+.contacto .item img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 12px;
+}
+
+.contacto .item p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  font-family: 'Cardo', serif;
+}
+
+/* MENSAJE FINAL */
+.mensaje-final {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  font-family: "Crimson Text", serif;
+  color: #6e584f;
+}
+
+
+/* 📱 ADAPTACIÓN A MÓVIL */
+@media (max-width: 600px) {
+
+  .contacto-items {
+    gap: 30px;
+  }
+
+  .contacto .item {
+    width: 120px;
+  }
+
+  .contacto .item img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mensaje-final {
+    font-size: 1.25rem;
+    padding: 0 20px;
+  }
+}
+
+/* BOTÓN */
 .btn-sumarme {
   display: inline-block;
   padding: 12px 28px;
-  background-color: #8c6f50; /* tono tierra cálido */
+  background-color: #8c6f50;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
   border-radius: 30px;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  font-family: "Cormorant Garamond", serif; /* combina con tu estilo */
+  font-family: "Cormorant Garamond", serif;
   margin-top: 30px;
 }
 
 .btn-sumarme:hover {
-  background-color: #6e573f; /* más oscuro para el hover */
+  background-color: #6e573f;
   transform: scale(1.05);
 }
 
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 125%;
+  height: 125%;
+  padding: 14px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
 
 /* FOOTER */
 footer {
@@ -174,25 +367,29 @@ footer {
 }
 
 .social-buttons a img {
-  width: 30px; /* tamaño del icono */
+  width: 30px;
   height: 30px;
 }
 
 .social-buttons a:hover {
-  transform: scale(1.2); /* efecto al pasar el mouse */
+  transform: scale(1.2);
 }
-
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+  header {
+    padding: 0 10px;
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
     background: #6e584f;
     position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
+    top: 70px;
+    right: 10px;
+    width: 180px;
     padding: 20px;
     border-radius: 10px;
   }
@@ -203,5 +400,52 @@ footer {
 
   .menu-btn {
     display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    padding: 15px 25px;
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  .btn-sumarme {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+/* 🔧 FIJA EL PROBLEMA DEL CARRUSEL EN MÓVIL */
+@media (max-width: 768px) {
+
+  .dos-columnas .columna.imagen {
+    width: 100%;
+    display: flex;            /* Asegura que el carrusel se muestre */
+    justify-content: center;  /* Centrado */
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 320px;         /* Ajuste ideal para móvil */
+    aspect-ratio: 3 / 4 !important;
+    height: auto;             /* Asegura altura */
+  }
+
+  .carousel img {
+    height: 100%;
+    object-fit: cover;
   }
 }

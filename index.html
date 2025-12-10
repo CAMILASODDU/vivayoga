@@ -1,106 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viva Yoga</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aixa Yoga</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;600&family=Cardo&family=Cormorant+Garamond:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-        <img src="logo_vivayoga.png" alt="Viva Yoga" />
+
+    <header>
+        <div class="logo">
+            <img src="img/logo_vivayoga.png" alt="Logo Aixa Yoga">
+        </div>
+        <div class="menu-btn" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#clases">Clases</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <img src="img/logo_vivayoga.png" alt="">
+    </section>
+
+    <section id="sobre-mi">
+        <h2>Vinyasa Hatha Yoga ♡</h2>
+        <p>
+            ༄ La práctica de Vinyasa Hatha Yoga es ideal para personas que buscan equilibrar la mente, fortalecer
+            músculos, trabajar la flexibilidad y alcanzar un estado de fluidez cuerpo-mente. Es una práctica dinámica
+            donde la respiración marca el ritmo del movimiento. Cada postura se conecta con la siguiente, creando
+            secuencias fluidas que permiten sentir el ejercicio físico como una práctica orgánica, confortable y
+            armónica. Es un estilo creativo, donde las posturas se adaptan a cada practicante según sus objetivos. En
+            mis prácticas vas a encontrar un equlibrio perfecto entre la fluidez de posturas y la actividad
+            cardiovascular de Vinyasa, con el fortalecimiento, la estabilidad y ecuanimidad de Hatha Yoga. Vinyasa Hatha
+            Yoga es el arte de moverse con conciencia, al ritmo de la respiración y encontrar el equilibrio entre la
+            fuerza y la calma.
+        </p>
+    </section>
+
+    <section class="dos-columnas">
+        <div class="columna imagen">
+            <div class="carousel">
+                <img class="active" src="img/img1.JPG" alt="Imagen 1">
+                <img src="img/img2.JPG" alt="Imagen 2">
+
+                <div class="carousel-counter">1 / 2</div>
+
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+
+        </div>
+
+
+        <div class="columna texto">
+            <h2>Sobre mí</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ipsa ut sint commodi corporis natus
+                quaerat totam minus quas et fuga nostrum officia dolorem eum, officiis nisi minima aliquid quos
+                obcaecati maiores. Sit ea corporis temporibus itaque pariatur illo officia commodi minima aperiam modi
+                eum eligendi est repellat, tenetur a. Beatae non porro nam, ea assumenda saepe. Accusamus maiores
+                consequatur accusantium est rerum! Velit asperiores eveniet voluptatem. Mollitia aperiam odio incidunt
+                perferendis illum voluptatum, nam nemo repudiandae! Provident blanditiis quo molestiae modi voluptatem
+                fugit beatae omnis facilis dolorem magni saepe harum voluptatibus quia porro reprehenderit autem ipsum
+                incidunt, libero est.
+            </p>
+        </div>
+    </section>
+
+    <section id="clases">
+        <h2>Clases virtuales</h2>
+        <p>El espacio de clases virtuales es una oportunidad para conectar con tu cuerpo desde el lugar en el que estés.
+            Cada semana comparto prácticas a través de un grupo privado de WhatsApp, con acceso a las clases grabadas en
+            YouTube. Podés hacerlas en el horario que elijas, a tu ritmo, y organizarte de la mejor manera para tener
+            constancia y disciplina en tu práctica personal. No se trata solo de hacer posturas (asanas), sino también
+            de aprender a mantener la consciencia en la respiración en movimiento, sentir la fluidez del cuerpo y
+            trabajar la concentración y la ecuanimidad durante la práctica. Este espacio virtual está pensado como una
+            práctica viva, cercana y consciente. No hay exigencias ni comparaciones, solo la invitación a conectar con
+            vos mismo cada vez que preparás tu mat.
+            <br>🌿 Si sentís el llamado, estás invitada a empezar a practicar desde cualquier parte del mundo y ser
+            parte de esta comunidad con presencia y amor.
+        </p>
+        <a class="btn-sumarme" href="https://wa.me/">Quiero sumarme a las clases virtuales</a>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+
+        <div class="contacto-items">
+
+            <a class="item" href="https://www.instagram.com/_vivayoga/" target="_blank">
+                <img src="img/instagram-icon.svg" alt="Instagram">
+                <p>@_vivayoga</p>
+            </a>
+
+            <a class="item" href="https://wa.me/5492214358593" target="_blank">
+                <img src="img/whatsapp-icon-oscuro.png" alt="Whatsapp">
+                <p>+ 54 221 435-8593</p>
+            </a>
+
+            <a class="item" href="mailto:aixahasselstrom@gmail.com">
+                <img src="img/email-icon.svg" alt="Email">
+                <p>Aixahasselstrom@gmail.com</p>
+            </a>
+
+            <a class="item" href="https://www.facebook.com/aixhasselstrom" target="_blank">
+                <img src="img/facebook-icon.svg" alt="Facebook">
+                <p>Aixa Hasselström </p>
+            </a>
+
+        </div>
+
+        <h3 class="mensaje-final">
+            Tu bienestar es prioridad. ¡Conversemos!
+        </h3>
+    </section>
+
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp">
+        </a>
     </div>
 
-    <nav>
-      <div class="menu-btn" id="menu-btn">
-        ☰
-      </div>
-      <ul id="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#clases">Clases</a></li>
-        <li><a href="#sobremi">Sobre mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+    <footer>
+        <div class="social-buttons">
+            <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+        </div>
+        <p>© 2025 Aixa Yoga</p>
+    </footer>
 
-  <!-- HERO -->
-  <div id="inicio" class="hero">        
-    <img src="logo_vivayoga.png" alt="Viva Yoga" class="logo" />
-  </div>
-
-  <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/+5492214358593" class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="whatsapp-icon.png" alt="WhatsApp" />
-  </a>
-
-
-  <!-- SECCIÓN 1 -->
-  <section>
-    <h2>Vinyasa Hatha Yoga ♡</h2>
-    <p>༄ La práctica de Vinyasa Hatha Yoga es ideal para personas que buscan equilibrar la mente, fortalecer músculos, trabajar la flexibilidad y alcanzar un estado de fluidez cuerpo-mente. Es una práctica dinámica donde la respiración marca el ritmo del movimiento. Cada postura se conecta con la siguiente, creando secuencias fluidas que permiten sentir el ejercicio físico como una práctica orgánica, confortable y armónica. Es un estilo creativo, donde las posturas se adaptan a cada practicante según sus objetivos. En mis prácticas vas a encontrar un equlibrio perfecto entre la fluidez de posturas y la actividad cardiovascular de Vinyasa, con el fortalecimiento, la estabilidad y ecuanimidad de Hatha Yoga. Vinyasa Hatha Yoga es el arte de moverse con conciencia, al ritmo de la respiración y encontrar el equilibrio entre la fuerza y la calma.</p>
-  </section>
-
-  <div class="divider">🌿</div>
-
-
-  <!-- SECCIÓN 2 -->
-  <section id="clases">
-    <h2>Clases virtuales ∞</h2>
-    <p>El espacio de clases virtuales es una oportunidad para conectar con tu cuerpo desde el lugar en el que estés.
-    Cada semana comparto prácticas a través de un grupo privado de WhatsApp, con acceso a las clases grabadas en YouTube. Podés hacerlas en el horario que elijas, a tu ritmo, y organizarte de la mejor manera para tener constancia y disciplina en tu práctica personal.
-
-    No se trata solo de hacer posturas (asanas), sino también de aprender a mantener la consciencia en la respiración en movimiento, sentir la fluidez del cuerpo y trabajar la concentración y la ecuanimidad durante la práctica.
-    Este espacio virtual está pensado como una práctica viva, cercana y consciente. No hay exigencias ni comparaciones, solo la invitación a conectar con vos mismo cada vez que preparás tu mat.
-    <br>
-    🌿 Si sentís el llamado, estás invitada a empezar a practicar desde cualquier parte del mundo y ser parte de esta comunidad con presencia y amor.</p>
-    <a href="https://wa.me/+5492214358593" class="btn-sumarme">Quiero sumarme a las clases virtuales</a>
-  </section>
-
-  <div class="divider">🌿</div>
-
-  <!-- SECCIÓN 3 -->
-  <section id="sobremi">
-    <h2>Sobre mí</h2>
-    <p>Uorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </section>
-
-  <div class="divider">🌿</div>
-
-  <!-- SECCIÓN 4 -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Uorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </section>
-
-  <footer>
-    <div class="social-buttons">
-      <a href="https://www.instagram.com/_vivayoga" target="_blank" class="instagram">
-       <img src="instagram-icon.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/aixahasselstrom" target="_blank" class="facebook">
-        <img src="facebook-icon.png" alt="Facebook">
-      </a>
-    </div>
-  <p>&copy; 2025 Viva Yoga</p>
-  </footer>
-
-  <!-- SCRIPT -->
-  <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu");
-
-    menuBtn.addEventListener("click", () => {
-      menu.classList.toggle("active");
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
