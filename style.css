@@ -72,6 +72,10 @@ section {
   background: #f3ece8;
 }
 
+section h2 {
+  margin-bottom: 40px;
+}
+
 /* DOS COLUMNAS */
 .dos-columnas {
   display: flex;
@@ -234,3 +238,5 @@ footer {
     padding: 0;
   }
 }
+
+/** clases.html **/  
