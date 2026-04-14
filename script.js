@@ -1,32 +1,73 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-const images = document.querySelectorAll(".carousel img");
-const prevBtn = document.querySelector(".carousel .prev");
-const nextBtn = document.querySelector(".carousel .next");
-const counter = document.querySelector(".carousel-counter");
+  // MENU
+  window.toggleMenu = function () {
+    document.getElementById("menu").classList.toggle("active");
+  };
 
-let index = 0;
-const total = images.length;
+  // CARRUSEL
+  const images = document.querySelectorAll(".carousel img");
+  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next");
+  const counter = document.querySelector(".carousel-counter");
 
-function showImage(i) {
-    images.forEach(img => img.classList.remove("active"));
-    images[i].classList.add("active");
-    counter.textContent = `${i + 1} / ${total}`;
-}
+  if (images.length > 0) {
+    let index = 0;
 
-prevBtn.addEventListener("click", () => {
-    index = (index === 0) ? total - 1 : index - 1;
-    showImage(index);
+    function show(i) {
+      images.forEach(img => img.classList.remove("active"));
+      images[i].classList.add("active");
+      counter.textContent = `${i + 1} / ${images.length}`;
+    }
+
+    if (prev) {
+      prev.onclick = () => {
+        index = (index - 1 + images.length) % images.length;
+        show(index);
+      };
+    }
+
+    if (next) {
+      next.onclick = () => {
+        index = (index + 1) % images.length;
+        show(index);
+      };
+    }
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      show(index);
+    }, 4000);
+
+    show(index);
+  }
+
+  // LOGIN
+  window.abrirLogin = function () {
+    document.getElementById("loginModal").style.display = "block";
+  };
+
+  window.cerrarLogin = function () {
+    document.getElementById("loginModal").style.display = "none";
+  };
+
+  window.validarLogin = function () {
+    const usuario = document.getElementById("user").value;
+    const password = document.getElementById("pass").value;
+
+    if (usuario === "admin" && password === "1234") {
+      window.location.href = "clases.html";
+    } else {
+      alert("Credenciales incorrectas");
+    }
+  };
+
+  // CERRAR TOCANDO AFUERA
+  window.onclick = (e) => {
+    const modal = document.getElementById("loginModal");
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
 });
-
-nextBtn.addEventListener("click", () => {
-    index = (index === total - 1) ? 0 : index + 1;
-    showImage(index);
-});
-
-// Auto-slide
-setInterval(() => {
-    index = (index === total - 1) ? 0 : index + 1;
-    showImage(index);
-}, 4000);
-
-showImage(index);
