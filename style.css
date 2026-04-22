@@ -406,6 +406,16 @@ section p {
   }
 }
 
+.clase-card button {
+  border: none;
+  cursor: pointer;
+}
+
+/* espacio entre elementos */
+.clase-card p {
+  margin: 12px 0;
+}
+
 /* FOOTER */
 footer {
   background: #6e584f;
