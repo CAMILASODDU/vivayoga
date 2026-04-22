@@ -1,114 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aixa Yoga</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Cormorant+Garamond:wght@400;600&family=Cardo&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aixa Yoga</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Cormorant+Garamond:wght@400;600&family=Cardo&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <img src="img/logo_vivayoga.png">
-  </div>
+  <header>
+    <div class="logo">
+      <img src="img/logo_vivayoga.png">
+    </div>
 
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-  <nav>
-    <ul id="menu">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#clases-box">Clases</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav>
+      <ul id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#clases-box">Clases</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <img src="img/logo_vivayoga.png">
-</section>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="animacion-hero.mp4" type="video/mp4">
+    </video>
 
-<!-- SOBRE -->
-<section id="sobre-mi" class="bg-blanco">
-  <h2>Vinyasa Hatha Yoga ♡</h2>
-  <p>La práctica de Vinyasa Hatha Yoga equilibra cuerpo y mente...</p>
-</section>
+    <div class="hero-overlay"></div>
 
-<!-- DOS COLUMNAS -->
-<section class="dos-columnas bg-marron">
-  <div class="columna imagen">
-    <div class="carousel">
-      <img class="active" src="img/img1.JPG">
-      <img src="img/img2.JPG">
+    <img src="img/logo_vivayoga.png" class="hero-logo">
+  </section>
 
-      <button class="prev">❮</button>
-      <button class="next">❯</button>
+  <!-- SOBRE -->
+  <section id="sobre-mi" class="bg-blanco">
+    <h2>Vinyasa Hatha Yoga ♡</h2>
+    <p>༄ La práctica de Vinyasa Hatha Yoga es ideal para personas que buscan equilibrar la mente, fortalecer músculos,
+      trabajar la flexibilidad y alcanzar un estado de fluidez cuerpo-mente. Es una práctica dinámica donde la
+      respiración marca el ritmo del movimiento. Cada postura se conecta con la siguiente, creando secuencias fluidas
+      que permiten sentir el ejercicio físico como una práctica orgánica, confortable y armónica. Es un estilo creativo,
+      donde las posturas se adaptan a cada practicante según sus objetivos. En mis prácticas vas a encontrar un
+      equlibrio perfecto entre la fluidez de posturas y la actividad cardiovascular de Vinyasa, con el fortalecimiento,
+      la estabilidad y ecuanimidad de Hatha Yoga. Vinyasa Hatha Yoga es el arte de moverse con conciencia, al ritmo de
+      la respiración y encontrar el equilibrio entre la fuerza y la calma.</p>
+  </section>
 
-      <div class="carousel-counter">1 / 2</div>
+  <!-- DOS COLUMNAS -->
+  <section class="dos-columnas bg-marron">
+    <div class="columna imagen">
+      <div class="carousel">
+        <img class="active" src="img/img1.JPG">
+        <img src="img/img2.JPG">
+
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+
+        <div class="carousel-counter">1 / 2</div>
+      </div>
+    </div>
+
+    <div class="columna texto">
+      <h2>Sobre mí</h2>
+      <p>Soy Aixa, tengo 30 años y soy profesora de Hatha Yoga y Ashtanga Vinyasa Yoga. Realicé mis formaciones en
+        Argentina y desde Diciembre de 2020 brindo clases, acompañando a practicantes de diferentes lugares, con
+        diferentes objetivos, en su camino de bienestar y autoconocimiento. Mi misión como profesora es acompañarte en
+        tu proceso desde el amor, para que cada práctica se convierta en un espacio sagrado de conexión con el cuerpo,
+        de aceptación personal y autosanación
+      </p>
+    </div>
+  </section>
+
+  <!-- CLASES -->
+  <section class="clases-box bg-blanco" id="clases-box">
+    <h2>Clases</h2>
+
+    <div class="clases-container">
+      <div class="clase-card" onclick="abrirLogin()">
+        <h3>Hatha Yoga</h3>
+        <p>Posturas tradicionales y respiración.</p>
+        <a class="btn-video"
+          href="https://wa.me/542215754925?text=Hola%20quiero%20pedir%20mis%20credenciales%20para%20las%20clases%20de%20yoga"
+          target="_blank">
+          Pedir credenciales
+        </a>
+      </div>
+
+      <div class="clase-card" onclick="abrirLogin()">
+        <h3>Vinyasa Flow</h3>
+        <p>Secuencias dinámicas y fluidas.</p>
+        <a class="btn-video"
+          href="https://wa.me/542215754925?text=Hola%20quiero%20pedir%20mis%20credenciales%20para%20las%20clases%20de%20yoga"
+          target="_blank">
+          Pedir credenciales
+        </a>
+      </div>
+
+      <div class="clase-card" onclick="abrirLogin()">
+        <h3>Yoga Relax</h3>
+        <p>Relajación profunda y meditación.</p>
+        <a class="btn-video"
+          href="https://wa.me/542215754925?text=Hola%20quiero%20pedir%20mis%20credenciales%20para%20las%20clases%20de%20yoga"
+          target="_blank">
+          Pedir credenciales
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASES VIRTUALES -->
+  <section id="clases" class="bg-marron">
+    <h2>Clases virtuales</h2>
+    <p>Este espacio es una oportunidad para conectar con tu cuerpo desde el lugar en el que estés. Podés practicar en el
+      horario que elijas, a tu ritmo, y organizarte de la mejor manera para tener constancia y disciplina en tu práctica
+      personal.
+
+      No se trata solo de hacer posturas (Asanas), sino también de aprender a mantener la consciencia en tu respiración
+      en movimiento, sentir la fluidez del cuerpo y trabajar la concentración y la ecuanimidad durante la práctica.
+      Este espacio virtual está pensado como una práctica viva, cercana y consciente. No hay exigencias ni
+      comparaciones. Sólo vos y tu mat.
+
+      Si sentís el llamado, estás invitado/a a empezar a practicar desde cualquier parte del mundo y ser parte de esta
+      comunidad virtual con presencia y amor.
+
+      Te espero en el mat!
+      Namasté,
+      Aixa ♡</p>
+
+    <a class="btn-sumarme" href="#">Quiero sumarme</a>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-blanco">
+    <h2>Contacto</h2>
+
+    <div class="contacto-container">
+
+      <!-- WHATSAPP -->
+      <div class="contacto-card">
+        <div class="icono">
+          <img src="img/whatsapp.png" alt="WhatsApp">
+        </div>
+        <h3>WhatsApp</h3>
+        <a href="https://wa.me/542215754925" target="_blank" class="btn-contacto">
+          Escribirme
+        </a>
+      </div>
+
+      <!-- INSTAGRAM -->
+      <div class="contacto-card">
+        <div class="icono">
+          <img src="img/instagram.png" alt="Instagram">
+        </div>
+        <h3>Instagram</h3>
+        <a href="https://instagram.com/" target="_blank" class="btn-contacto">
+          Ver perfil
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOGIN -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarLogin()">&times;</span>
+      <h3>Ingresar</h3>
+      <input type="text" placeholder="Usuario" id="user">
+      <input type="password" placeholder="Contraseña" id="pass">
+      <button onclick="validarLogin()">Entrar</button>
     </div>
   </div>
 
-  <div class="columna texto">
-    <h2>Sobre mí</h2>
-    <p>Texto original...</p>
-  </div>
-</section>
+  <footer>
+    <p>© 2025 Aixa Yoga</p>
+  </footer>
 
-<!-- CLASES -->
-<section class="clases-box bg-blanco" id="clases-box">
-  <h2>Clases</h2>
-
-  <div class="clases-container">
-    <div class="clase-card" onclick="abrirLogin()">
-      <h3>Hatha Yoga</h3>
-      <p>Posturas tradicionales y respiración.</p>
-    </div>
-
-    <div class="clase-card" onclick="abrirLogin()">
-      <h3>Vinyasa Flow</h3>
-      <p>Secuencias dinámicas y fluidas.</p>
-    </div>
-
-    <div class="clase-card" onclick="abrirLogin()">
-      <h3>Yoga Relax</h3>
-      <p>Relajación profunda y meditación.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CLASES VIRTUALES -->
-<section id="clases" class="bg-marron">
-  <h2>Clases virtuales</h2>
-  <p>Tu texto original intacto</p>
-
-  <a class="btn-sumarme" href="#">Quiero sumarme</a>
-</section>
-
-<!-- CONTACTO -->
-<section class="contacto bg-blanco" id="contacto">
-  <h2>Contacto</h2>
-</section>
-
-<!-- LOGIN -->
-<div id="loginModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="cerrarLogin()">&times;</span>
-    <h3>Ingresar</h3>
-    <input type="text" placeholder="Usuario" id="user">
-    <input type="password" placeholder="Contraseña" id="pass">
-    <button onclick="validarLogin()">Entrar</button>
-  </div>
-</div>
-
-<footer>
-  <p>© 2025 Aixa Yoga</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
