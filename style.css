@@ -242,13 +242,16 @@ section p {
   padding: 30px;
   border-radius: 20px;
   width: 260px;
-  cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
+.clase-card p {
+  text-align: center;
+}
+
 .clase-card:hover {
-  transform: translateY(-5px);
+  transform: none;
 }
 
 @media (max-width: 768px) {
