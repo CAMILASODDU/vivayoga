@@ -134,11 +134,24 @@ section p {
 }
 
 @media (max-width: 768px) {
+
+  section {
+    padding: 70px 24px;
+    /* 🔥 más aire lateral real */
+  }
+
   section p {
-    max-width: 90%;
-    text-align: left;
-    /* 🔑 mejor lectura en mobile */
-    font-size: 15px;
+    max-width: 100%;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    /* 🔥 CLAVE para evitar huecos */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+
+    font-size: 15.5px;
+    line-height: 1.85;
+    letter-spacing: 0.2px;
   }
 }
 
