@@ -116,7 +116,7 @@ section {
 
 section h2 {
   margin-bottom: 25px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'the season', serif;
   font-weight: 600;
 }
 
@@ -131,6 +131,7 @@ section p {
   line-height: 1.8;
   /* 🔑 más aire */
   font-size: 16px;
+  font-family: cardo, serif;
 }
 
 @media (max-width: 768px) {
