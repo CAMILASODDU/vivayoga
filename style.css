@@ -50,9 +50,10 @@ nav a {
   position: relative;
   height: 100vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  /* centra horizontal */
   align-items: center;
-  padding-right: 60px;
+  /* centra vertical */
   overflow: hidden;
 }
 
@@ -86,7 +87,8 @@ nav a {
 .hero-logo {
   position: relative;
   z-index: 2;
-  max-width: 300px;
+  max-width: 320px;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -208,6 +210,11 @@ section p {
 .carousel img {
   width: 100%;
   display: none;
+  transition: opacity 0.4s ease;
+}
+
+.carousel img.active {
+  display: block;
 }
 
 .carousel img.active {
@@ -635,4 +642,13 @@ footer {
   .video-card img {
     height: 190px;
   }
+}
+
+.credito {
+  color: #CFC8C3;
+  /* violeta */
+  padding: 4px 0px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s ease;
 }

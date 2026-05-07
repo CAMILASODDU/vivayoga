@@ -5,34 +5,36 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("menu").classList.toggle("active");
   };
 
-  // CARRUSEL
-  const images = document.querySelectorAll(".carousel img");
-  const prev = document.querySelector(".prev");
-  const next = document.querySelector(".next");
-  const counter = document.querySelector(".carousel-counter");
+  // ================= CARRUSELES =================
+  document.querySelectorAll(".carousel").forEach((carousel) => {
 
-  if (images.length > 0) {
+    const images = carousel.querySelectorAll("img");
+    const prev = carousel.querySelector(".prev");
+    const next = carousel.querySelector(".next");
+    const counter = carousel.querySelector(".carousel-counter");
+
     let index = 0;
 
     function show(i) {
-      images.forEach(img => img.classList.remove("active"));
+
+      images.forEach((img) => {
+        img.classList.remove("active");
+      });
+
       images[i].classList.add("active");
+
       counter.textContent = `${i + 1} / ${images.length}`;
     }
 
-    if (prev) {
-      prev.onclick = () => {
-        index = (index - 1 + images.length) % images.length;
-        show(index);
-      };
-    }
+    prev.addEventListener("click", () => {
+      index = (index - 1 + images.length) % images.length;
+      show(index);
+    });
 
-    if (next) {
-      next.onclick = () => {
-        index = (index + 1) % images.length;
-        show(index);
-      };
-    }
+    next.addEventListener("click", () => {
+      index = (index + 1) % images.length;
+      show(index);
+    });
 
     setInterval(() => {
       index = (index + 1) % images.length;
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 4000);
 
     show(index);
-  }
+  });
 
   // LOGIN
   window.abrirLogin = function () {
