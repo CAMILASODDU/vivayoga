@@ -676,6 +676,96 @@ footer {
   }
 }
 
+/* ================= TESTIMONIOS ================= */
+
+.testimonios {
+  background: #f3ece8;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.testimonios-subtitulo {
+  color: #9b8577;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.testimonios-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.testimonios h2 {
+  margin-bottom: 25px;
+  font-family: 'the season', serif;
+  font-weight: 600;
+  color: #6e584f;
+  margin-bottom: 10px;
+}
+
+.testimonio-card {
+  background: #f8f4f1;
+  width: 240px;
+  padding: 32px 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.comillas {
+  font-size: 42px;
+  color: #a68163;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.mensaje {
+  font-family: 'Cardo', serif;
+  color: #6e584f;
+  font-size: 15px;
+  line-height: 1.9;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.linea {
+  width: 40px;
+  height: 1px;
+  background: #b39176;
+  margin: 0 auto 15px;
+}
+
+.nombre {
+  color: #7a5d4b;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .testimonios {
+    padding: 80px 24px;
+  }
+
+  .testimonios h2 {
+    font-size: 34px;
+  }
+
+  .testimonio-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 .credito {
   color: #CFC8C3;
   /* violeta */
