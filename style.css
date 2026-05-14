@@ -87,7 +87,7 @@ nav a {
 .hero-logo {
   position: relative;
   z-index: 2;
-  max-width: 320px;
+  max-width: 230px;
   width: 100%;
 }
 
@@ -98,7 +98,7 @@ nav a {
   }
 
   .hero-logo {
-    max-width: 220px;
+    max-width: 200px;
   }
 }
 
@@ -374,7 +374,7 @@ section p {
 }
 
 .contacto-card {
-  background: #ffffff;
+  background: #F1E7DE;
   padding: 30px;
   border-radius: 20px;
   width: 260px;
@@ -468,8 +468,22 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+  header {
+    padding: 0 16px;
+  }
+
   .menu-btn {
     display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000;
+  }
+
+  nav {
+    width: 0;
   }
 
   nav ul {
